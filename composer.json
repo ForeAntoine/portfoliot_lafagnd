@@ -1,0 +1,40 @@
+{
+    "name": "tlafagnd/portfoliot-lafagnd",
+    "type": "typo3-cms-extension",
+    "description": "Portfolio TLAFAGND\n",
+    "authors": [
+        {
+            "name": "Antoine_Fore",
+            "role": "Developer"
+        },
+        {
+            "name": "Tanguy_Laveau",
+            "role": "Developer"
+        },
+        {
+            "name": "Alexandre_Gouguet",
+            "role": "Developer"
+        },
+        {
+            "name": "Nicolas_Diot",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^8.7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "TLAFAGND\\PortfoliotLafagnd\\": "Classes"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TLAFAGND\\PortfoliotLafagnd\\Tests\\": "Tests"
+        }
+    },
+    "replace": {
+        "portfoliot_lafagnd": "self.version",
+        "typo3-ter/portfoliot-lafagnd": "self.version"
+    }
+}

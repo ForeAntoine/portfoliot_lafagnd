@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2019-01-14T17:40:24Z" product-name="portfoliot_lafagnd">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>Titre du projet</source>
+			</trans-unit>
+			<trans-unit id="description.description">
+				<source>Description du projet</source>
+			</trans-unit>
+			<trans-unit id="photo.description">
+				<source>photo associées au projet</source>
+			</trans-unit>
+			<trans-unit id="url_depot.description">
+				<source>urlDepot</source>
+			</trans-unit>
+			<trans-unit id="date_debut.description">
+				<source>dateDebut</source>
+			</trans-unit>
+			<trans-unit id="date_fin.description">
+				<source>dateFin</source>
+			</trans-unit>
+			<trans-unit id="skill.description">
+				<source>compétences</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
