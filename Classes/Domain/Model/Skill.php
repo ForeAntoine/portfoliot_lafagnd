@@ -1,5 +1,5 @@
 <?php
-namespace Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model;
+namespace TLAFAGND\PortfoliotLafagnd\Domain\Model;
 
 /***
  *
@@ -39,7 +39,7 @@ class Skill extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * catégories
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Category>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Category>
      * @lazy
      */
     protected $categories = null;
@@ -111,10 +111,10 @@ class Skill extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Category
      *
-     * @param \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Category $category
+     * @param \TLAFAGND\PortfoliotLafagnd\Domain\Model\Category $category
      * @return void
      */
-    public function addCategory(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Category $category)
+    public function addCategory(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Category $category)
     {
         $this->categories->attach($category);
     }
@@ -122,10 +122,10 @@ class Skill extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a Category
      *
-     * @param \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Category $categoryToRemove The Category to be removed
+     * @param \TLAFAGND\PortfoliotLafagnd\Domain\Model\Category $categoryToRemove The Category to be removed
      * @return void
      */
-    public function removeCategory(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Category $categoryToRemove)
+    public function removeCategory(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Category $categoryToRemove)
     {
         $this->categories->detach($categoryToRemove);
     }
@@ -133,7 +133,7 @@ class Skill extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the categories
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Category> $categories
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Category> categories
      */
     public function getCategories()
     {
@@ -143,7 +143,7 @@ class Skill extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the categories
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Category> $categories
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Category> $categories
      * @return void
      */
     public function setCategories(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $categories)

@@ -1,5 +1,5 @@
 <?php
-namespace Pottfoliotlafagnd\PortfoliotLafagnd\Controller;
+namespace TLAFAGND\PortfoliotLafagnd\Controller;
 
 /***
  *
