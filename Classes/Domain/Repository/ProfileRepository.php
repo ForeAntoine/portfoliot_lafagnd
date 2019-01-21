@@ -1,5 +1,5 @@
 <?php
-namespace Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Repository;
+namespace TLAFAGND\PortfoliotLafagnd\Domain\Repository;
 
 /***
  *

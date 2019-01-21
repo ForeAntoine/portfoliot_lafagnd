@@ -6,7 +6,7 @@ call_user_func(
     {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Pottfoliotlafagnd.PortfoliotLafagnd',
+            'TLAFAGND.PortfoliotLafagnd',
             'Trainingslafagnd',
             [
                 'Training' => 'list, show'
@@ -18,7 +18,7 @@ call_user_func(
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Pottfoliotlafagnd.PortfoliotLafagnd',
+            'TLAFAGND.PortfoliotLafagnd',
             'Profilesafagnd',
             [
                 'Profile' => 'list, show'
@@ -33,7 +33,7 @@ call_user_func(
         );
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-            'Pottfoliotlafagnd.PortfoliotLafagnd',
+            'TLAFAGND.PortfoliotLafagnd',
             'Projectafagnd',
             [
                 'Project' => 'list, show, highlight, skills'

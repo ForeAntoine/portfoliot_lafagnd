@@ -1,5 +1,5 @@
 <?php
-namespace Pottfoliotlafagnd\PortfoliotLafagnd\Tests\Unit\Domain\Model;
+namespace TLAFAGND\PortfoliotLafagnd\Tests\Unit\Domain\Model;
 
 /**
  * Test case.
@@ -12,14 +12,14 @@ namespace Pottfoliotlafagnd\PortfoliotLafagnd\Tests\Unit\Domain\Model;
 class TrainingTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 {
     /**
-     * @var \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Training
+     * @var \TLAFAGND\PortfoliotLafagnd\Domain\Model\Training
      */
     protected $subject = null;
 
     protected function setUp()
     {
         parent::setUp();
-        $this->subject = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Training();
+        $this->subject = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Training();
     }
 
     protected function tearDown()
@@ -221,7 +221,7 @@ class TrainingTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setSkillsForObjectStorageContainingSkillSetsSkills()
     {
-        $skill = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Skill();
+        $skill = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Skill();
         $objectStorageHoldingExactlyOneSkills = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $objectStorageHoldingExactlyOneSkills->attach($skill);
         $this->subject->setSkills($objectStorageHoldingExactlyOneSkills);
@@ -238,7 +238,7 @@ class TrainingTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function addSkillToObjectStorageHoldingSkills()
     {
-        $skill = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Skill();
+        $skill = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Skill();
         $skillsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
@@ -255,7 +255,7 @@ class TrainingTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function removeSkillFromObjectStorageHoldingSkills()
     {
-        $skill = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Skill();
+        $skill = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Skill();
         $skillsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()

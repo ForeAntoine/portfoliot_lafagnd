@@ -1,5 +1,5 @@
 <?php
-namespace Pottfoliotlafagnd\PortfoliotLafagnd\Tests\Unit\Domain\Model;
+namespace TLAFAGND\PortfoliotLafagnd\Tests\Unit\Domain\Model;
 
 /**
  * Test case.
@@ -12,14 +12,14 @@ namespace Pottfoliotlafagnd\PortfoliotLafagnd\Tests\Unit\Domain\Model;
 class SocialTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 {
     /**
-     * @var \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Social
+     * @var \TLAFAGND\PortfoliotLafagnd\Domain\Model\Social
      */
     protected $subject = null;
 
     protected function setUp()
     {
         parent::setUp();
-        $this->subject = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Social();
+        $this->subject = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Social();
     }
 
     protected function tearDown()

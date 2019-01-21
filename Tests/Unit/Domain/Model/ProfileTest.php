@@ -1,5 +1,5 @@
 <?php
-namespace Pottfoliotlafagnd\PortfoliotLafagnd\Tests\Unit\Domain\Model;
+namespace TLAFAGND\PortfoliotLafagnd\Tests\Unit\Domain\Model;
 
 /**
  * Test case.
@@ -12,14 +12,14 @@ namespace Pottfoliotlafagnd\PortfoliotLafagnd\Tests\Unit\Domain\Model;
 class ProfileTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 {
     /**
-     * @var \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Profile
+     * @var \TLAFAGND\PortfoliotLafagnd\Domain\Model\Profile
      */
     protected $subject = null;
 
     protected function setUp()
     {
         parent::setUp();
-        $this->subject = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Profile();
+        $this->subject = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Profile();
     }
 
     protected function tearDown()
@@ -245,7 +245,7 @@ class ProfileTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setProjectsForObjectStorageContainingProjectSetsProjects()
     {
-        $project = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Project();
+        $project = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Project();
         $objectStorageHoldingExactlyOneProjects = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $objectStorageHoldingExactlyOneProjects->attach($project);
         $this->subject->setProjects($objectStorageHoldingExactlyOneProjects);
@@ -262,7 +262,7 @@ class ProfileTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function addProjectToObjectStorageHoldingProjects()
     {
-        $project = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Project();
+        $project = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Project();
         $projectsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
@@ -279,7 +279,7 @@ class ProfileTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function removeProjectFromObjectStorageHoldingProjects()
     {
-        $project = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Project();
+        $project = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Project();
         $projectsObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()
@@ -308,7 +308,7 @@ class ProfileTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setJobForObjectStorageContainingJobSetsJob()
     {
-        $job = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Job();
+        $job = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Job();
         $objectStorageHoldingExactlyOneJob = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $objectStorageHoldingExactlyOneJob->attach($job);
         $this->subject->setJob($objectStorageHoldingExactlyOneJob);
@@ -325,7 +325,7 @@ class ProfileTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function addJobToObjectStorageHoldingJob()
     {
-        $job = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Job();
+        $job = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Job();
         $jobObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
@@ -342,7 +342,7 @@ class ProfileTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function removeJobFromObjectStorageHoldingJob()
     {
-        $job = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Job();
+        $job = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Job();
         $jobObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()
@@ -371,7 +371,7 @@ class ProfileTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setSocialForObjectStorageContainingSocialSetsSocial()
     {
-        $social = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Social();
+        $social = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Social();
         $objectStorageHoldingExactlyOneSocial = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $objectStorageHoldingExactlyOneSocial->attach($social);
         $this->subject->setSocial($objectStorageHoldingExactlyOneSocial);
@@ -388,7 +388,7 @@ class ProfileTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function addSocialToObjectStorageHoldingSocial()
     {
-        $social = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Social();
+        $social = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Social();
         $socialObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
@@ -405,7 +405,7 @@ class ProfileTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function removeSocialFromObjectStorageHoldingSocial()
     {
-        $social = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Social();
+        $social = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Social();
         $socialObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()
@@ -434,7 +434,7 @@ class ProfileTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function setTrainingForObjectStorageContainingTrainingSetsTraining()
     {
-        $training = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Training();
+        $training = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Training();
         $objectStorageHoldingExactlyOneTraining = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
         $objectStorageHoldingExactlyOneTraining->attach($training);
         $this->subject->setTraining($objectStorageHoldingExactlyOneTraining);
@@ -451,7 +451,7 @@ class ProfileTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function addTrainingToObjectStorageHoldingTraining()
     {
-        $training = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Training();
+        $training = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Training();
         $trainingObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['attach'])
             ->disableOriginalConstructor()
@@ -468,7 +468,7 @@ class ProfileTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function removeTrainingFromObjectStorageHoldingTraining()
     {
-        $training = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Training();
+        $training = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Training();
         $trainingObjectStorageMock = $this->getMockBuilder(\TYPO3\CMS\Extbase\Persistence\ObjectStorage::class)
             ->setMethods(['detach'])
             ->disableOriginalConstructor()

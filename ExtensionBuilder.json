@@ -821,7 +821,7 @@
                 "actions": {
                     "controllerActionCombinations": "Profile=>list,show",
                     "noncacheableActions": "",
-                    "switchableActions": "CVteque\nProfile->list;Profil->show"
+                    "switchableActions": "CVteque\nProfile->list;Profile->show"
                 },
                 "description": "",
                 "key": "profilesafagnd",
@@ -838,7 +838,7 @@
                 "name": "Projects"
             }
         ],
-        "vendorName": "Pottfoliotlafagnd"
+        "vendorName": "TLAFAGND"
     },
     "wires": [
         {
@@ -939,7 +939,7 @@
         }
     ],
     "log": {
-        "last_modified": "2019-01-14 05:40",
+        "last_modified": "2019-01-21 04:46",
         "extension_builder_version": "8.10.2",
         "be_user": " (3)"
     }

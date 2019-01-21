@@ -1,5 +1,5 @@
 <?php
-namespace Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model;
+namespace TLAFAGND\PortfoliotLafagnd\Domain\Model;
 
 /***
  *
@@ -78,7 +78,7 @@ class Job extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * compétences de l'emploie
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Skill>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Skill>
      */
     protected $skills = null;
 
@@ -254,10 +254,10 @@ class Job extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Skill
      *
-     * @param \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Skill $skill
+     * @param \TLAFAGND\PortfoliotLafagnd\Domain\Model\Skill $skill
      * @return void
      */
-    public function addSkill(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Skill $skill)
+    public function addSkill(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Skill $skill)
     {
         $this->skills->attach($skill);
     }
@@ -265,10 +265,10 @@ class Job extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a Skill
      *
-     * @param \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Skill $skillToRemove The Skill to be removed
+     * @param \TLAFAGND\PortfoliotLafagnd\Domain\Model\Skill $skillToRemove The Skill to be removed
      * @return void
      */
-    public function removeSkill(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Skill $skillToRemove)
+    public function removeSkill(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Skill $skillToRemove)
     {
         $this->skills->detach($skillToRemove);
     }
@@ -276,7 +276,7 @@ class Job extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the skills
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Skill> $skills
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Skill> skills
      */
     public function getSkills()
     {
@@ -286,7 +286,7 @@ class Job extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the skills
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Skill> $skills
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Skill> $skills
      * @return void
      */
     public function setSkills(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $skills)

@@ -1,5 +1,5 @@
 <?php
-namespace Pottfoliotlafagnd\PortfoliotLafagnd\Tests\Unit\Controller;
+namespace TLAFAGND\PortfoliotLafagnd\Tests\Unit\Controller;
 
 /**
  * Test case.
@@ -12,14 +12,14 @@ namespace Pottfoliotlafagnd\PortfoliotLafagnd\Tests\Unit\Controller;
 class ProjectControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 {
     /**
-     * @var \Pottfoliotlafagnd\PortfoliotLafagnd\Controller\ProjectController
+     * @var \TLAFAGND\PortfoliotLafagnd\Controller\ProjectController
      */
     protected $subject = null;
 
     protected function setUp()
     {
         parent::setUp();
-        $this->subject = $this->getMockBuilder(\Pottfoliotlafagnd\PortfoliotLafagnd\Controller\ProjectController::class)
+        $this->subject = $this->getMockBuilder(\TLAFAGND\PortfoliotLafagnd\Controller\ProjectController::class)
             ->setMethods(['redirect', 'forward', 'addFlashMessage'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -40,7 +40,7 @@ class ProjectControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $projectRepository = $this->getMockBuilder(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Repository\ProjectRepository::class)
+        $projectRepository = $this->getMockBuilder(\TLAFAGND\PortfoliotLafagnd\Domain\Repository\ProjectRepository::class)
             ->setMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -59,7 +59,7 @@ class ProjectControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function showActionAssignsTheGivenProjectToView()
     {
-        $project = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Project();
+        $project = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Project();
 
         $view = $this->getMockBuilder(\TYPO3\CMS\Extbase\Mvc\View\ViewInterface::class)->getMock();
         $this->inject($this->subject, 'view', $view);

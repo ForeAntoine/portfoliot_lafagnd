@@ -6,7 +6,7 @@ call_user_func(
     {
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            'Pottfoliotlafagnd.PortfoliotLafagnd',
+            'TLAFAGND.PortfoliotLafagnd',
             'Trainingslafagnd',
             'catalogue de formation'
         );
@@ -16,7 +16,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:portfoliot_lafagnd/Configuration/FlexForms/flexform_trainingslafagnd.xml');
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            'Pottfoliotlafagnd.PortfoliotLafagnd',
+            'TLAFAGND.PortfoliotLafagnd',
             'Profilesafagnd',
             'CVteque'
         );
@@ -26,7 +26,7 @@ call_user_func(
         \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue($pluginSignature, 'FILE:EXT:portfoliot_lafagnd/Configuration/FlexForms/flexform_profilesafagnd.xml');
 
         \TYPO3\CMS\Extbase\Utility\ExtensionUtility::registerPlugin(
-            'Pottfoliotlafagnd.PortfoliotLafagnd',
+            'TLAFAGND.PortfoliotLafagnd',
             'Projectafagnd',
             'Projects'
         );

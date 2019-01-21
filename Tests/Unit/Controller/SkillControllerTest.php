@@ -1,5 +1,5 @@
 <?php
-namespace Pottfoliotlafagnd\PortfoliotLafagnd\Tests\Unit\Controller;
+namespace TLAFAGND\PortfoliotLafagnd\Tests\Unit\Controller;
 
 /**
  * Test case.
@@ -12,14 +12,14 @@ namespace Pottfoliotlafagnd\PortfoliotLafagnd\Tests\Unit\Controller;
 class SkillControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 {
     /**
-     * @var \Pottfoliotlafagnd\PortfoliotLafagnd\Controller\SkillController
+     * @var \TLAFAGND\PortfoliotLafagnd\Controller\SkillController
      */
     protected $subject = null;
 
     protected function setUp()
     {
         parent::setUp();
-        $this->subject = $this->getMockBuilder(\Pottfoliotlafagnd\PortfoliotLafagnd\Controller\SkillController::class)
+        $this->subject = $this->getMockBuilder(\TLAFAGND\PortfoliotLafagnd\Controller\SkillController::class)
             ->setMethods(['redirect', 'forward', 'addFlashMessage'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -35,7 +35,7 @@ class SkillControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function showActionAssignsTheGivenSkillToView()
     {
-        $skill = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Skill();
+        $skill = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Skill();
 
         $view = $this->getMockBuilder(\TYPO3\CMS\Extbase\Mvc\View\ViewInterface::class)->getMock();
         $this->inject($this->subject, 'view', $view);
