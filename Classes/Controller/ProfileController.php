@@ -23,7 +23,7 @@ class ProfileController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * profileRepository
      *
-     * @var \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Repository\ProfileRepository
+     * @var \TLAFAGND\PortfoliotLafagnd\Domain\Repository\ProfileRepository
      * @inject
      */
     protected $profileRepository = null;
@@ -31,7 +31,7 @@ class ProfileController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * action list
      *
-     * @param Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Profilee
+     * @param TLAFAGND\PortfoliotLafagnd\Domain\Model\Profilee
      * @return void
      */
     public function listAction()
@@ -43,10 +43,10 @@ class ProfileController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * action show
      *
-     * @param Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Profilee
+     * @param TLAFAGND\PortfoliotLafagnd\Domain\Model\Profilee
      * @return void
      */
-    public function showAction(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Profile $profile)
+    public function showAction(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Profile $profile)
     {
         $this->view->assign('profil', $profil);
     }

@@ -1,5 +1,5 @@
 <?php
-namespace Pottfoliotlafagnd\PortfoliotLafagnd\Tests\Unit\Controller;
+namespace TLAFAGND\PortfoliotLafagnd\Tests\Unit\Controller;
 
 /**
  * Test case.
@@ -12,14 +12,14 @@ namespace Pottfoliotlafagnd\PortfoliotLafagnd\Tests\Unit\Controller;
 class ProfilControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
 {
     /**
-     * @var \Pottfoliotlafagnd\PortfoliotLafagnd\Controller\ProfilController
+     * @var \TLAFAGND\PortfoliotLafagnd\Controller\ProfilController
      */
     protected $subject = null;
 
     protected function setUp()
     {
         parent::setUp();
-        $this->subject = $this->getMockBuilder(\Pottfoliotlafagnd\PortfoliotLafagnd\Controller\ProfilController::class)
+        $this->subject = $this->getMockBuilder(\TLAFAGND\PortfoliotLafagnd\Controller\ProfilController::class)
             ->setMethods(['redirect', 'forward', 'addFlashMessage'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -40,7 +40,7 @@ class ProfilControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
             ->disableOriginalConstructor()
             ->getMock();
 
-        $profilRepository = $this->getMockBuilder(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Repository\ProfilRepository::class)
+        $profilRepository = $this->getMockBuilder(\TLAFAGND\PortfoliotLafagnd\Domain\Repository\ProfilRepository::class)
             ->setMethods(['findAll'])
             ->disableOriginalConstructor()
             ->getMock();
@@ -59,7 +59,7 @@ class ProfilControllerTest extends \TYPO3\CMS\Core\Tests\UnitTestCase
      */
     public function showActionAssignsTheGivenProfilToView()
     {
-        $profil = new \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Profil();
+        $profil = new \TLAFAGND\PortfoliotLafagnd\Domain\Model\Profil();
 
         $view = $this->getMockBuilder(\TYPO3\CMS\Extbase\Mvc\View\ViewInterface::class)->getMock();
         $this->inject($this->subject, 'view', $view);
