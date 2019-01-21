@@ -23,7 +23,7 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * projectRepository
      *
-     * @var \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Repository\ProjectRepository
+     * @var \TLAFAGND\PortfoliotLafagnd\Domain\Repository\ProjectRepository
      * @inject
      */
     protected $projectRepository = null;
@@ -42,10 +42,10 @@ class ProjectController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * action show
      *
-     * @param \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Project $project
+     * @param \TLAFAGND\PortfoliotLafagnd\Domain\Model\Project $project
      * @return void
      */
-    public function showAction(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Project $project)
+    public function showAction(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Project $project)
     {
         $this->view->assign('project', $project);
     }
