@@ -1,5 +1,5 @@
 <?php
-namespace Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model;
+namespace TLAFAGND\PortfoliotLafagnd\Domain\Model;
 
 /***
  *
@@ -84,7 +84,7 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * liste des projets du profil
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Project>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Project>
      * @cascade remove
      * @lazy
      */
@@ -93,7 +93,7 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * emplois réalisés
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Job>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Job>
      * @cascade remove
      * @lazy
      */
@@ -102,7 +102,7 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * réseaux sociaux
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Social>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Social>
      * @cascade remove
      * @lazy
      */
@@ -111,7 +111,7 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * fomations de la personne
      *
-     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Training>
+     * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Training>
      * @lazy
      */
     protected $training = null;
@@ -312,10 +312,10 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Project
      *
-     * @param \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Project $project
+     * @param \TLAFAGND\PortfoliotLafagnd\Domain\Model\Project $project
      * @return void
      */
-    public function addProject(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Project $project)
+    public function addProject(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Project $project)
     {
         $this->projects->attach($project);
     }
@@ -323,10 +323,10 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a Project
      *
-     * @param \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Project $projectToRemove The Project to be removed
+     * @param \TLAFAGND\PortfoliotLafagnd\Domain\Model\Project $projectToRemove The Project to be removed
      * @return void
      */
-    public function removeProject(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Project $projectToRemove)
+    public function removeProject(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Project $projectToRemove)
     {
         $this->projects->detach($projectToRemove);
     }
@@ -334,7 +334,7 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the projects
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Project> $projects
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Project> projects
      */
     public function getProjects()
     {
@@ -344,7 +344,7 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the projects
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Project> $projects
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Project> $projects
      * @return void
      */
     public function setProjects(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $projects)
@@ -355,10 +355,10 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Job
      *
-     * @param \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Job $job
+     * @param \TLAFAGND\PortfoliotLafagnd\Domain\Model\Job $job
      * @return void
      */
-    public function addJob(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Job $job)
+    public function addJob(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Job $job)
     {
         $this->job->attach($job);
     }
@@ -366,10 +366,10 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a Job
      *
-     * @param \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Job $jobToRemove The Job to be removed
+     * @param \TLAFAGND\PortfoliotLafagnd\Domain\Model\Job $jobToRemove The Job to be removed
      * @return void
      */
-    public function removeJob(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Job $jobToRemove)
+    public function removeJob(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Job $jobToRemove)
     {
         $this->job->detach($jobToRemove);
     }
@@ -377,7 +377,7 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the job
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Job> $job
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Job> job
      */
     public function getJob()
     {
@@ -387,7 +387,7 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the job
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Job> $job
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Job> $job
      * @return void
      */
     public function setJob(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $job)
@@ -398,10 +398,10 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Social
      *
-     * @param \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Social $social
+     * @param \TLAFAGND\PortfoliotLafagnd\Domain\Model\Social $social
      * @return void
      */
-    public function addSocial(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Social $social)
+    public function addSocial(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Social $social)
     {
         $this->social->attach($social);
     }
@@ -409,10 +409,10 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a Social
      *
-     * @param \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Social $socialToRemove The Social to be removed
+     * @param \TLAFAGND\PortfoliotLafagnd\Domain\Model\Social $socialToRemove The Social to be removed
      * @return void
      */
-    public function removeSocial(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Social $socialToRemove)
+    public function removeSocial(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Social $socialToRemove)
     {
         $this->social->detach($socialToRemove);
     }
@@ -420,7 +420,7 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the social
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Social> $social
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Social> social
      */
     public function getSocial()
     {
@@ -430,7 +430,7 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the social
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Social> $social
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Social> $social
      * @return void
      */
     public function setSocial(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $social)
@@ -441,10 +441,10 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Adds a Training
      *
-     * @param \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Training $training
+     * @param \TLAFAGND\PortfoliotLafagnd\Domain\Model\Training $training
      * @return void
      */
-    public function addTraining(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Training $training)
+    public function addTraining(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Training $training)
     {
         $this->training->attach($training);
     }
@@ -452,10 +452,10 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Removes a Training
      *
-     * @param \Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Training $trainingToRemove The Training to be removed
+     * @param \TLAFAGND\PortfoliotLafagnd\Domain\Model\Training $trainingToRemove The Training to be removed
      * @return void
      */
-    public function removeTraining(\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Training $trainingToRemove)
+    public function removeTraining(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Training $trainingToRemove)
     {
         $this->training->detach($trainingToRemove);
     }
@@ -463,7 +463,7 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Returns the training
      *
-     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Training> $training
+     * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Training> training
      */
     public function getTraining()
     {
@@ -473,7 +473,7 @@ class Profile extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity
     /**
      * Sets the training
      *
-     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\Pottfoliotlafagnd\PortfoliotLafagnd\Domain\Model\Training> $training
+     * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TLAFAGND\PortfoliotLafagnd\Domain\Model\Training> $training
      * @return void
      */
     public function setTraining(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $training)
