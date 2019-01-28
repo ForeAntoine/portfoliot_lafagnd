@@ -1,7 +1,7 @@
 # portfoliot_lafagnd
 
 ## PAGE D'ACCUEIL
-* __liste des personnes ayant participé aux développement__
+* __liste des personnes ayant participé aux développement__ #__DONE__
 * vue mise en valeur de projets
 
 ## PAGE CV
