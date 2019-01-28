@@ -20,7 +20,7 @@
 		<div style="background-color: lightgray" >
 			<f:for each="{projects}" as="project">
 				<f:link.action action="show" arguments="{project : project}"> {project.title}</f:link.action>
-				<p>{project.description}</p>
+				<f:format.html><p>{project.description}</p></f:format.html>
 				<f:for each="{project.photo}" as="photo">
 					<f:image image="{photo}"/>
 				</f:for>
