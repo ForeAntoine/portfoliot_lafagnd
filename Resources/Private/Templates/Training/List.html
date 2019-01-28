@@ -16,34 +16,30 @@
 		<h1>Listing for Training</h1>
 
 		<f:flashMessages />
+		<f:widget.paginate objects="{trainings}" as="trainingList" configuration="{itemsPerPage: 5, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 10}">
+				<f:for each="{trainingList}" as="training">
+					<div class="container">
+						<p>
+							<f:translate key="tx_portfoliotlafagnd_domain_model_training.title" /> : 
+							<f:link.action action="show" arguments="{training : training}"> {training.title}</f:link.action>
+						</p>
+						<p>
+							<f:translate key="tx_portfoliotlafagnd_domain_model_training.domain" /> : 
+							<f:link.action action="show" arguments="{training : training}"> {training.domain}</f:link.action>
+						</p>
+						<p>
+							<f:translate key="tx_portfoliotlafagnd_domain_model_training.date_debut" /> : 
+							<f:link.action action="show" arguments="{training : training}"> {training.dateDebut -> f:format.date()}</f:link.action>
+						</p>
+						<p>
+							<f:translate key="tx_portfoliotlafagnd_domain_model_training.date_fin" /> : 
+							<f:link.action action="show" arguments="{training : training}"> {training.dateFin -> f:format.date()}</f:link.action>
+						</p>
 
-		<table  class="tx_portfoliotlafagnd" >
-			<tr>
-				<th><f:translate key="tx_portfoliotlafagnd_domain_model_training.domain" /></th>
-				<th><f:translate key="tx_portfoliotlafagnd_domain_model_training.date_debut" /></th>
-				<th><f:translate key="tx_portfoliotlafagnd_domain_model_training.date_fin" /></th>
-				<th><f:translate key="tx_portfoliotlafagnd_domain_model_training.degree" /></th>
-				<th><f:translate key="tx_portfoliotlafagnd_domain_model_training.location" /></th>
-				<th><f:translate key="tx_portfoliotlafagnd_domain_model_training.title" /></th>
-				<th><f:translate key="tx_portfoliotlafagnd_domain_model_training.description" /></th>
-				<th> </th>
-				<th> </th>
-			</tr>
-
-			<f:for each="{trainings}" as="training">
-				<tr>
-					<td><f:link.action action="show" arguments="{training : training}"> {training.domain}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{training : training}"> {training.dateDebut -> f:format.date()}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{training : training}"> {training.dateFin -> f:format.date()}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{training : training}"> {training.degree}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{training : training}"> {training.location}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{training : training}"> {training.title}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{training : training}"> {training.description}</f:link.action></td>
-					<td><f:link.action action="edit" arguments="{training : training}">Edit</f:link.action></td>
-					<td><f:link.action action="delete" arguments="{training : training}">Delete</f:link.action></td>
-				</tr>
-			</f:for>
-		</table>
+					</div>
+					<hr>
+				</f:for>
+		</f:widget.paginate>
 
 		<f:link.action action="new">New Training</f:link.action>
 	</f:section>
