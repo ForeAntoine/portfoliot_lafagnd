@@ -16,7 +16,13 @@
 		<h1>Listing for Profile</h1>
 
 		<f:flashMessages />
-
+		<f:for each="{profiles}" as="profile">
+			<div class="contener">
+				<f:link.action action="show" arguments="{profile : profile}"> {profile.photo.originalResource}</f:link.action>
+		
+			</div>
+		</f:for>
+		<!-- 
 		<table  class="tx_portfoliotlafagnd" >
 			<tr>
 				<th><f:translate key="tx_portfoliotlafagnd_domain_model_profile.name" /></th>
@@ -46,7 +52,7 @@
 				</tr>
 			</f:for>
 		</table>
-
+		 -->
 		<f:link.action action="new">New Profile</f:link.action>
 	</f:section>
 </html>

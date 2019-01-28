@@ -31,23 +31,23 @@ class ProfileController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
     /**
      * action list
      *
-     * @param TLAFAGND\PortfoliotLafagnd\Domain\Model\Profilee
+     * @param TLAFAGND\PortfoliotLafagnd\Domain\Model\Profile
      * @return void
      */
     public function listAction()
     {
-        $profils = $this->profilRepository->findAll();
-        $this->view->assign('profils', $profils);
+        $profiles = $this->profileRepository->findAll();
+        $this->view->assign('profiles', $profiles);
     }
 
     /**
      * action show
      *
-     * @param TLAFAGND\PortfoliotLafagnd\Domain\Model\Profilee
+     * @param TLAFAGND\PortfoliotLafagnd\Domain\Model\Profile
      * @return void
      */
     public function showAction(\TLAFAGND\PortfoliotLafagnd\Domain\Model\Profile $profile)
     {
-        $this->view->assign('profil', $profil);
+        $this->view->assign('profile', $profile);
     }
 }
