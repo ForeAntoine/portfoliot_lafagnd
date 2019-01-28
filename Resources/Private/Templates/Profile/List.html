@@ -16,7 +16,28 @@
 		<h1>Listing for Profile</h1>
 
 		<f:flashMessages />
-
+		<f:for each="{profiles}" as="profile">
+				<div class="card" style="width: 18rem;">
+					<img class="card-img-top" src="..." alt="Card image cap">
+					<div class="card-body">
+						<h5 class="card-title">
+							{profile.name}
+							{profile.firstName}
+						</h5>
+						<p class="card-text">
+							{profile.photo.originalResource.name}
+							{profile.birthDate}
+							{profile.drivingLicence}
+							{profile.phone}
+							{profile.mail}
+							{profile.address}
+						</p>
+						<a href="#" class="btn btn-primary">Profile</a>
+					</div>
+				</div>
+				
+		</f:for>
+		<!-- 
 		<table  class="tx_portfoliotlafagnd" >
 			<tr>
 				<th><f:translate key="tx_portfoliotlafagnd_domain_model_profile.name" /></th>
@@ -46,7 +67,7 @@
 				</tr>
 			</f:for>
 		</table>
-
+		 -->
 		<f:link.action action="new">New Profile</f:link.action>
 	</f:section>
 </html>

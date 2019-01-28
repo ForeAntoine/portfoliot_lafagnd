@@ -18,6 +18,6 @@ namespace TLAFAGND\PortfoliotLafagnd\Domain\Repository;
 /**
  * The repository for Projets
  */
-class ProjectRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
+class TrainingRepository extends \TYPO3\CMS\Extbase\Persistence\Repository
 {
     }

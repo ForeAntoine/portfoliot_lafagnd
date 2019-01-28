@@ -21,8 +21,17 @@ namespace TLAFAGND\PortfoliotLafagnd\Controller;
 class TrainingController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 {
     /**
+     * trainingRepository
+     *
+     * @var \TLAFAGND\PortfoliotLafagnd\Domain\Repository\TrainingRepository
+     * @inject
+     */
+    protected $trainingRepository = null;
+
+    /**
      * action list
      *
+     * @param TLAFAGND\PortfoliotLafagnd\Domain\Model\Training
      * @return void
      */
     public function listAction()
