@@ -13,39 +13,21 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-		<h1>Listing for Project</h1>
+		<h1>Project List</h1>
 
 		<f:flashMessages />
 
-		<table  class="tx_portfoliotlafagnd" >
-			<tr>
-				<th><f:translate key="tx_portfoliotlafagnd_domain_model_project.title" /></th>
-				<th><f:translate key="tx_portfoliotlafagnd_domain_model_project.description" /></th>
-				<th><f:translate key="tx_portfoliotlafagnd_domain_model_project.photo" /></th>
-				<th><f:translate key="tx_portfoliotlafagnd_domain_model_project.url_depot" /></th>
-				<th><f:translate key="tx_portfoliotlafagnd_domain_model_project.date_debut" /></th>
-				<th><f:translate key="tx_portfoliotlafagnd_domain_model_project.date_fin" /></th>
-
-			</tr>
-
+		<div style="background-color: lightgray" >
 			<f:for each="{projects}" as="project">
-				<tr>
-					<td><f:link.action action="show" arguments="{project : project}"> {project.title}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{project : project}"> {project.description}</f:link.action></td>
-					<f:for each="{project.photo}" as="photo">
-							<td><f:link.action action="show" arguments="{project : project}"> {photo}</f:link.action></td>
-					</f:for>
-					<td><f:link.action action="show" arguments="{project : project}"> {project.urlDepot}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{project : project}"> {project.dateDebut -> f:format.date()}</f:link.action></td>
-					<td><f:link.action action="show" arguments="{project : project}"> {project.dateFin -> f:format.date()}</f:link.action></td>
-					<f:for each="{project.skills}" as="skill">
-							<td><f:link.action action="show" arguments="{project : project}"> {skill}</f:link.action></td>
-					</f:for>
-					<td><f:link.action action="edit" arguments="{project : project}">Edit</f:link.action></td>
-					<td><f:link.action action="delete" arguments="{project : project}">Delete</f:link.action></td>
-				</tr>
+				<f:link.action action="show" arguments="{project : project}"> {project.title}</f:link.action>
+				<f:format.html><p>{project.description}</p></f:format.html>
+				<f:for each="{project.photo}" as="photo">
+					<f:image image="{photo}"/>
+				</f:for>
+				<p>Start Date {project.dateDebut -> f:format.date()}</p>
+				<p>End Date {project.dateFin -> f:format.date()}</p>
 			</f:for>
-		</table>
+		</div>
 
 		<f:link.action action="new">New Project</f:link.action>
 	</f:section>

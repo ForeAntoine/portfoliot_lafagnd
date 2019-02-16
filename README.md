@@ -11,8 +11,7 @@
 * __vue list avec pagination__
 
 ### PAGE FORMATION
-* __Vue list/show des formations mis en forme (pas de tableau)__
-* __Vue list avec pagination et formulaire de recherche__
+* __Vue list avec formulaire de recherche__
 * vue de recherche avec reprise du gabarit de listing (pas de pagination obligatoire)
 
 ### PAGE PROJET
@@ -32,6 +31,8 @@
 ### PAGE CV
 
 ### PAGE FORMATION
+* __Vue list/show des formations mis en forme (pas de tableau)__
+* __Vue list avec pagination__
 
 ### PAGE PROJET
 
