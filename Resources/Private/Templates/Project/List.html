@@ -13,22 +13,23 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-		<h1>Project List</h1>
+		<h1>Projets</h1>
 
 		<f:flashMessages />
 
-		<div style="background-color: lightgray" >
+		<div style="margin-left: 40px">
 			<f:for each="{projects}" as="project">
 				<f:link.action action="show" arguments="{project : project}"> {project.title}</f:link.action>
 				<f:format.html><p>{project.description}</p></f:format.html>
 				<f:for each="{project.photo}" as="photo">
-					<f:image image="{photo}"/>
+					<f:image image="{photo}" style="margin: 20px 0;"/>
 				</f:for>
-				<p>Start Date {project.dateDebut -> f:format.date()}</p>
-				<p>End Date {project.dateFin -> f:format.date()}</p>
+				<p>Débuté le : {project.dateDebut -> f:format.date()}</p>
+				<p>Fini le : {project.dateFin -> f:format.date()}</p>
+				<hr style="margin: 20px 0;">
 			</f:for>
 		</div>
 
-		<f:link.action action="new">New Project</f:link.action>
+		<f:link.action action="new">Nouveau Projet</f:link.action>
 	</f:section>
 </html>

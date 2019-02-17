@@ -13,43 +13,32 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-		<h1>Single View for Training</h1>
+		<h1>{training.title}</h1>
 
 		<f:flashMessages />
-		<p>
-				<f:translate key="tx_portfoliotlafagnd_domain_model_training.title" /> : 
-				<f:link.action action="show" arguments="{training : training}"> {training.title}</f:link.action>
-			</p>
-			<p>
-				<f:translate key="tx_portfoliotlafagnd_domain_model_training.domain" /> : 
-				<f:link.action action="show" arguments="{training : training}"> {training.domain}</f:link.action>
-			</p>
-			<p>
-				<f:translate key="tx_portfoliotlafagnd_domain_model_training.description" /> : <br>
-				<f:link.action action="show" arguments="{training : training}"> {training.description}</f:link.action>
-			</p>
-			<p>
-				<f:translate key="tx_portfoliotlafagnd_domain_model_training.date_debut" /> : 
-				<f:link.action action="show" arguments="{training : training}"> {training.dateDebut -> f:format.date()}</f:link.action>
-			</p>
-			<p>
-				<f:translate key="tx_portfoliotlafagnd_domain_model_training.date_fin" /> : 
-				<f:link.action action="show" arguments="{training : training}"> {training.dateFin -> f:format.date()}</f:link.action>
-			</p>
-			<p>
-					<f:translate key="tx_portfoliotlafagnd_domain_model_training.degree" /> : 
-					<f:link.action action="show" arguments="{training : training}"> {training.degree}</f:link.action>
-			</p>
-			<p>
-					<f:translate key="tx_portfoliotlafagnd_domain_model_training.location" /> : 
-					<f:link.action action="show" arguments="{training : training}"> {training.location}</f:link.action>
-			</p>
-			<ul>
-				<f:for each="{training.skills}" as="skill">
-					<li>{skill.title}</li>
-				</f:for>
-			</ul>
-		<f:link.action action="list">Back to list</f:link.action><br />
-		<f:link.action action="new">New Training</f:link.action>
+		<div style="margin-left: 40px;">
+			<p><f:format.html>{training.description}</f:format.html></p>
+			<f:for each="{training.photo}" as="photo">
+				<f:image image="{photo}" style="margin: 20px 0;"/>
+			</f:for>
+			<p>Lieu de la formation : {training.location}</p>
+			<p>Débuté le : {training.dateDebut -> f:format.date()}</p>
+			<p>Fini le : {training.dateFin -> f:format.date()}</p>
+		</div>
+		<h2 style="margin-bottom: 20px">Compétences</h2>
+		<ul>
+			<f:for each="{training.skills}" as="skill">
+					<li style=
+					"margin-right: 10px;
+					margin-bottom: 40px;
+					list-style: none;
+					border-radius: 10px;
+					background-color: #cccccc;
+					padding: 7px;
+					display: inline-block;
+					width: auto;">{skill.title}</li>
+			</f:for>
+		</ul>
+		<f:link.action action="list">Retour à la liste</f:link.action><br />
 	</f:section>
 </html>

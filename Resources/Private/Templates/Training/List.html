@@ -16,30 +16,19 @@
 		<h1>Listing for Training</h1>
 
 		<f:flashMessages />
-		<f:widget.paginate objects="{trainings}" as="trainingList" configuration="{itemsPerPage:3, insertAbove: 1, insertBelow: 0, maximumNumberOfLinks: 10}">
-				<f:for each="{trainingList}" as="training">
-					<div class="container">
-						<p>
-							<f:translate key="tx_portfoliotlafagnd_domain_model_training.title" /> : 
-							<f:link.action action="show" arguments="{training : training}"> {training.title}</f:link.action>
-						</p>
-						<p>
-							<f:translate key="tx_portfoliotlafagnd_domain_model_training.domain" /> : 
-							<f:link.action action="show" arguments="{training : training}"> {training.domain}</f:link.action>
-						</p>
-						<p>
-							<f:translate key="tx_portfoliotlafagnd_domain_model_training.date_debut" /> : 
-							<f:link.action action="show" arguments="{training : training}"> {training.dateDebut -> f:format.date()}</f:link.action>
-						</p>
-						<p>
-							<f:translate key="tx_portfoliotlafagnd_domain_model_training.date_fin" /> : 
-							<f:link.action action="show" arguments="{training : training}"> {training.dateFin -> f:format.date()}</f:link.action>
-						</p>
-
-					</div>
-					<hr>
-				</f:for>
-		</f:widget.paginate>
+		<f:for each="{trainings}" as="training">
+			<div class="card" style="margin-left: 40px">
+				<div class="card-body">
+					<h4 class="card-title">{training.title}</h4>
+					<p class="card-text">
+						{training.description}</br>
+						Lieu : {training.location}</br>
+					</p>
+					<f:link.action action="show" arguments="{training : training}">Détails</f:link.action>
+					<hr style="margin: 20px 0;">
+				</div>
+			</div>
+		</f:for>
 
 		<f:link.action action="new">New Training</f:link.action>
 	</f:section>

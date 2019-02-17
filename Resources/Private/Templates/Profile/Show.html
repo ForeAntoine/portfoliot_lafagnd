@@ -13,11 +13,17 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-		<h1>Single View for Profile</h1>
+		<h1>{profile.firstName} {profile.name}</h1>
+		<h5>{profile.birthDate}</h5>
 
 		<f:flashMessages />
-		<f:render partial="Profile/Properties" arguments="{profile:profile}" />
-		<f:link.action action="list">Back to list</f:link.action><br />
-		<f:link.action action="new">New Profile</f:link.action>
+		<div style="margin-left: 40px; margin-bottom: 20px;">
+			<f:image image="{profile.photo}" style="margin: 20px 0; max-width: 200px; height: auto;"/>
+			<p>Permis : {profile.drivingLicence}</p>
+			<p>Téléphone : {profile.phone}</p>
+			<p>Mail : {profile.mail}</p>
+			<p>Adresse : {profile.address}</p>
+		</div>
+		<f:link.action action="list">Retour à la liste</f:link.action><br />
 	</f:section>
 </html>

@@ -13,22 +13,32 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-		<h1>Project : {project.title}</h1>
+		<h1>{project.title}</h1>
 
 		<f:flashMessages />
-		<p><f:format.html>{project.description}</f:format.html></p>
-		<f:for each="{project.photo}" as="photo">
-			<f:image image="{photo}"/>
-		</f:for>
-		<p>Deposit URL {project.urlDepot}</p>
-		<p>Start Date {project.dateDebut -> f:format.date()}</p>
-		<p>End Date {project.dateFin -> f:format.date()}</p>
-		<p>Skills</p>
+		<div style="margin-left: 40px;">
+			<p><f:format.html>{project.description}</f:format.html></p>
+			<f:for each="{project.photo}" as="photo">
+				<f:image image="{photo}" style="margin: 20px 0;"/>
+			</f:for>
+			<p>URL de dépôt : <a href="{project.urlDepot}">{project.urlDepot}</a></p>
+			<p>Débuté le : {project.dateDebut -> f:format.date()}</p>
+			<p>Fini le : {project.dateFin -> f:format.date()}</p>
+		</div>
+		<h2 style="margin-bottom: 20px">Compétences</h2>
 		<ul>
 			<f:for each="{project.skill}" as="skill">
-					<li>{skill.title}</li>
+					<li style=
+					"margin-right: 10px;
+					margin-bottom: 40px;
+					list-style: none;
+					border-radius: 10px;
+					background-color: #cccccc;
+					padding: 7px;
+					display: inline-block;
+					width: auto;">{skill.title}</li>
 			</f:for>
 		</ul>
-		<f:link.action action="list">Back to list</f:link.action><br />
+		<f:link.action action="list">Retour à la liste</f:link.action><br />
 	</f:section>
 </html>

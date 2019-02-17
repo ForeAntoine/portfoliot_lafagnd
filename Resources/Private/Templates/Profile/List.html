@@ -13,31 +13,26 @@
 	Otherwise your changes will be overwritten the next time you save the extension in the extension builder
 
 	<f:section name="content">
-		<h1>Listing for Profile</h1>
+		<h1>Profils</h1>
 
 		<f:flashMessages />
 		<f:for each="{profiles}" as="profile">
-				<div class="card" style="width: 18rem;">
-					<img class="card-img-top" src="..." alt="Card image cap">
+				<div class="card" style="margin-left: 40px">
 					<div class="card-body">
-						<h5 class="card-title">
-							{profile.name}
-							{profile.firstName}
-						</h5>
+						<h4 class="card-title">{profile.name} {profile.firstName}</h4>
 						<p class="card-text">
-							{profile.photo.originalResource.name}
-							{profile.birthDate}
-							{profile.drivingLicence}
-							{profile.phone}
-							{profile.mail}
-							{profile.address}
+							Né(e) le : {profile.birthDate}</br>
+							Permis : {profile.drivingLicence}</br>
+							Tél : {profile.phone}</br>
+							Mail : {profile.mail}</br>
+							Adresse : {profile.address}
 						</p>
-						<a href="#" class="btn btn-primary">Profile</a>
+						<f:link.action action="show" arguments="{profile : profile}">Détails</f:link.action>
+						<hr style="margin: 20px 0;">
 					</div>
 				</div>
-				
 		</f:for>
-		<!-- 
+		<!--
 		<table  class="tx_portfoliotlafagnd" >
 			<tr>
 				<th><f:translate key="tx_portfoliotlafagnd_domain_model_profile.name" /></th>
